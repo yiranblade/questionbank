@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.questionbank.dao.ScheduleInfoMapper">
+  <resultMap id="BaseResultMap" type="com.questionbank.domain.ScheduleInfo">
+    <id column="scheduleinfo_id" jdbcType="INTEGER" property="scheduleinfoId" />
+    <result column="schedule_id" jdbcType="INTEGER" property="scheduleId" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="orders" jdbcType="INTEGER" property="orders" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="indicator" jdbcType="CHAR" property="indicator" />
+    <result column="indicator_level" jdbcType="INTEGER" property="indicatorLevel" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    scheduleinfo_id, schedule_id, type, orders, level, indicator, indicator_level, createtime
+  </sql>
+  <insert id="insertSelective" parameterType="com.questionbank.domain.ScheduleInfo">
+    insert into schedule_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="scheduleinfoId != null">
+        scheduleinfo_id,
+      </if>
+      <if test="scheduleId != null">
+        schedule_id,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="orders != null">
+        orders,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="indicator != null">
+        indicator,
+      </if>
+      <if test="indicatorLevel != null">
+        indicator_level,
+      </if>
+      <if test="createtime != null">
+        createtime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="scheduleinfoId != null">
+        #{scheduleinfoId,jdbcType=INTEGER},
+      </if>
+      <if test="scheduleId != null">
+        #{scheduleId,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="orders != null">
+        #{orders,jdbcType=INTEGER},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="indicator != null">
+        #{indicator,jdbcType=CHAR},
+      </if>
+      <if test="indicatorLevel != null">
+        #{indicatorLevel,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.questionbank.domain.ScheduleInfo">
+    update schedule_info
+    <set>
+      <if test="scheduleId != null">
+        schedule_id = #{scheduleId,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="orders != null">
+        orders = #{orders,jdbcType=INTEGER},
+      </if>
+      <if test="level != null">
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="indicator != null">
+        indicator = #{indicator,jdbcType=CHAR},
+      </if>
+      <if test="indicatorLevel != null">
+        indicator_level = #{indicatorLevel,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where scheduleinfo_id = #{scheduleinfoId,jdbcType=INTEGER}
+  </update>
+</mapper>

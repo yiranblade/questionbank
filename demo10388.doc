@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?mso-application progid="Word.Document"?>
+<pkg:package xmlns:pkg="http://schemas.microsoft.com/office/2006/xmlPackage">
+	<pkg:part pkg:contentType="application/vnd.openxmlformats-package.relationships+xml" pkg:name="/_rels/.rels" pkg:padding="512">
+		<pkg:xmlData>
+			<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+				<Relationship Id="rId3" Target="docProps/app.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties"/>
+				<Relationship Id="rId2" Target="docProps/core.xml" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties"/>
+				<Relationship Id="rId1" Target="word/document.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"/>
+				<Relationship Id="rId4" Target="docProps/custom.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties"/>
+			</Relationships>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:contentType="application/vnd.openxmlformats-package.relationships+xml" pkg:name="/word/_rels/document.xml.rels" pkg:padding="256">
+		<pkg:xmlData>
+			<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+				<Relationship Id="rId8" Target="theme/theme1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme"/>
+				<Relationship Id="rId3" Target="settings.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings"/>
+				<Relationship Id="rId7" Target="fontTable.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable"/>
+				<Relationship Id="rId2" Target="styles.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles"/>
+				<Relationship Id="rId1" Target="numbering.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering"/>
+				<Relationship Id="rId6" Target="endnotes.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes"/>
+				<Relationship Id="rId5" Target="footnotes.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes"/>
+				<Relationship Id="rId4" Target="webSettings.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings"/>
+			</Relationships>
+		</pkg:xmlData>
+	</pkg:part>
+	<pkg:part pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml" pkg:name="/word/document.xml">
+		<pkg:xmlData>
+			<w:document mc:Ignorable="w14 w15 wp14" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+				<w:body>
+					<w:p w:rsidR="00F06332" w:rsidRDefault="00860BE6">
+						<w:pPr>
+							<w:spacing w:after="156" w:afterLines="50" w:line="60" w:lineRule="atLeast"/>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia"/>
+								<w:szCs w:val="21"/>
+							</w:rPr>
+						</w:pPr>
+						<w:bookmarkStart w:id="0" w:name="_GoBack"/>
+						<w:bookmarkEnd w:id="0"/>
+						<w:r>
+							<w:rPr>
+								<w:noProof/>
+								<w:szCs w:val="21"/>
+							</w:rPr>
+							<w:pict>
+								<v:rect fillcolor="black" id="_x0000_s1053" strokeweight=".26mm" style="position:absolute;left:0;text-align:left;margin-left:23.25pt;margin-top:3.3pt;width:9.8pt;height:9.75pt;z-index:6"/>
+							</w:pict>
+						</w:r>
+						<w:r w:rsidR="00F06332">
+							<w:rPr>
+								<w:szCs w:val="21"/>
+								<w:lang w:eastAsia="zh-CN" w:val="en-US"/>
+							</w:rPr>
+							<w:pict>
+								<v:rect id="_x0000_s1026" style="position:absolute;left:0;text-align:left;margin-left:129.75pt;margin-top:2.85pt;width:9.8pt;height:9.75pt;z-index:3"/>
+							</w:pict>
+						</w:r>
+						<w:r w:rsidR="00F06332">
+							<w:rPr>
+								<w:szCs w:val="21"/>
+								<w:lang w:eastAsia="zh-CN" w:val="en-US"/>
+							</w:rPr>
+							<w:pict>
+								<v:rect id="_x0000_s1027" style="position:absolute;left:0;text-align:left;margin-left:78.75pt;margin-top:3.3pt;width:9.8pt;height:9.75pt;z-index:1"/>
+							</w:pict>
+						</w:r>
+						<w:r w:rsidR="00F06332">
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia"/>
+								<w:szCs w:val="21"/>
+							</w:rPr>
+							<w:t>A</w:t>
+						</w:r>
+						<w:r w:rsidR="00F06332">
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia"/>
+								<w:szCs w:val="21"/>
+							</w:rPr>
+							<w:t>卷</w:t>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia"/>
+								<w:szCs w:val="21"/>
+							</w:rPr>
+							<w:t xml:space="preserve"/>
+						</w:r>
+						<w:r w:rsidR="00F06332">
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia"/>
+							</w:rPr>
+							<w:t xml:space="preserve"/>
+						</w:r>
+						<w:r w:rsidR="00F06332">
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia"/>
+								<w:szCs w:val="21"/>
+							</w:rPr>
+							<w:t>B</w:t>
+						</w:r>
+						<w:r w:rsidR="00F06332">
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia"/>
+								<w:szCs w:val="21"/>
+							</w:rPr>
+							<w:t>卷</w:t>
+						</w:r>
+						<w:r w:rsidR="00F06332">
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia"/>
+								<w:szCs w:val="21"/>
+							</w:rPr>
+							<w:t xml:space="preserve">C</w:t>
+						</w:r>
+						<w:r w:rsidR="00F06332">
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia"/>
+								<w:szCs w:val="21"/>
+							</w:rPr>
+							<w:t>卷</w:t>
+						</w:r>
+					</w:p>
+					<w:p w:rsidR="00F06332" w:rsidRDefault="005847BB">
+						<w:pPr>
+							<w:spacing w:after="156" w:afterLines="50" w:line="60" w:lineRule="atLeast"/>
+							<w:jc w:val="center"/>
+							<w:rPr>
+								<w:rFonts w:hint="eastAsia"/>
+								<w:b/>
+								<w:sz w:val="32"/>
+								<w:szCs w:val="32"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:b/>
+								<w:sz w:val="32"/>
+								<w:szCs w:val="32"/>
+							</w:rPr>
+							<w:t>FreeMarker template error (DEBUG mode; use RETHROW in production!):
+The following has evaluated to null or missing:
+==> term  [in template "testS.ftl" at line 142, column 64]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${term}  [in template "testS.ftl" at line 142, column 62]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:355)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:41)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at com.questionbank.util.Paper_Word.createDoc(Paper_Word.java:54)
+	at com.questionbank.util.Main.main(Main.java:28)

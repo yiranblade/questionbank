@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.questionbank.dao.FullBlankMapper">
+  <resultMap id="BaseResultMap" type="com.questionbank.domain.FullBlank">
+    <id column="fullblank_id" jdbcType="INTEGER" property="fullblankId" />
+    <result column="answer" jdbcType="CHAR" property="answer" />
+    <result column="questiontype_id" jdbcType="INTEGER" property="questiontypeId" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.questionbank.domain.FullBlank">
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    fullblank_id, answer, questiontype_id
+  </sql>
+  <sql id="Blob_Column_List">
+    content
+  </sql>
+  <insert id="insertSelective" parameterType="com.questionbank.domain.FullBlank">
+    insert into fullblank
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fullblankId != null">
+        fullblank_id,
+      </if>
+      <if test="answer != null">
+        answer,
+      </if>
+      <if test="questiontypeId != null">
+        questiontype_id,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fullblankId != null">
+        #{fullblankId,jdbcType=INTEGER},
+      </if>
+      <if test="answer != null">
+        #{answer,jdbcType=CHAR},
+      </if>
+      <if test="questiontypeId != null">
+        #{questiontypeId,jdbcType=INTEGER},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.questionbank.domain.FullBlank">
+    update fullblank
+    <set>
+      <if test="answer != null">
+        answer = #{answer,jdbcType=CHAR},
+      </if>
+      <if test="questiontypeId != null">
+        questiontype_id = #{questiontypeId,jdbcType=INTEGER},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where fullblank_id = #{fullblankId,jdbcType=INTEGER}
+  </update>
+</mapper>

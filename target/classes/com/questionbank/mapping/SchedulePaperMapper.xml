@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.questionbank.dao.SchedulePaperMapper">
+  <resultMap id="BaseResultMap" type="com.questionbank.domain.SchedulePaper">
+    <id column="schedule_paperid" jdbcType="INTEGER" property="schedulePaperid" />
+    <result column="scheduleid" jdbcType="INTEGER" property="scheduleid" />
+    <result column="content" jdbcType="CHAR" property="content" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    schedule_paperid, scheduleid, content, createtime
+  </sql>
+  <insert id="insertSelective" parameterType="com.questionbank.domain.SchedulePaper">
+    insert into schedule_paper
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="schedulePaperid != null">
+        schedule_paperid,
+      </if>
+      <if test="scheduleid != null">
+        scheduleid,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="createtime != null">
+        createtime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="schedulePaperid != null">
+        #{schedulePaperid,jdbcType=INTEGER},
+      </if>
+      <if test="scheduleid != null">
+        #{scheduleid,jdbcType=INTEGER},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=CHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.questionbank.domain.SchedulePaper">
+    update schedule_paper
+    <set>
+      <if test="scheduleid != null">
+        scheduleid = #{scheduleid,jdbcType=INTEGER},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=CHAR},
+      </if>
+      <if test="createtime != null">
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where schedule_paperid = #{schedulePaperid,jdbcType=INTEGER}
+  </update>
+</mapper>

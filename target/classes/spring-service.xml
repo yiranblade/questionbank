@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+">
+	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="Add*" propagation="REQUIRED" />
+			<tx:method name="User*" propagation="REQUIRED" />
+			<tx:method name="Save*" propagation="REQUIRED" />
+			<tx:method name="Update*" propagation="REQUIRED" />
+			<tx:method name="Modify*" propagation="REQUIRED" />
+			<tx:method name="Wdit*" propagation="REQUIRED" />
+			<tx:method name="Insert*" propagation="REQUIRED" />
+			<tx:method name="Delete*" propagation="REQUIRED" />
+			<tx:method name="Remove*" propagation="REQUIRED" />
+			<tx:method name="Register*" propagation="REQUIRED" />
+			<tx:method name="Repair" propagation="REQUIRED" />
+			<tx:method name="Order*" propagation="REQUIRED" />
+			<tx:method name="Get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="Find*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="Load*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="Search*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="Datagrid*" propagation="REQUIRED"
+				read-only="true" />
+			<tx:method name="*" propagation="REQUIRED" read-only="false" />
+		</tx:attributes>
+	</tx:advice>
+	<aop:config>
+		<aop:pointcut id="transactionPointcut"
+			expression="execution(* com.questionbank.serviceimpl..*Impl.*(..))" />
+		<aop:advisor pointcut-ref="transactionPointcut"
+			advice-ref="transactionAdvice" />
+	</aop:config>
+</beans>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.questionbank.dao.ChoiceMapper">
+  <resultMap id="BaseResultMap" type="com.questionbank.domain.Choice">
+    <id column="choice_id" jdbcType="INTEGER" property="choiceId" />
+    <result column="choice_one" jdbcType="CHAR" property="choiceOne" />
+    <result column="choice_two" jdbcType="CHAR" property="choiceTwo" />
+    <result column="choice_three" jdbcType="CHAR" property="choiceThree" />
+    <result column="choice_four" jdbcType="CHAR" property="choiceFour" />
+    <result column="answer" jdbcType="CHAR" property="answer" />
+    <result column="questiontype_id" jdbcType="INTEGER" property="questiontypeId" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.questionbank.domain.Choice">
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    choice_id, choice_one, choice_two, choice_three, choice_four, answer, questiontype_id
+  </sql>
+  <sql id="Blob_Column_List">
+    content
+  </sql>
+  <insert id="insertSelective" parameterType="com.questionbank.domain.Choice">
+    insert into choice
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="choiceId != null">
+        choice_id,
+      </if>
+      <if test="choiceOne != null">
+        choice_one,
+      </if>
+      <if test="choiceTwo != null">
+        choice_two,
+      </if>
+      <if test="choiceThree != null">
+        choice_three,
+      </if>
+      <if test="choiceFour != null">
+        choice_four,
+      </if>
+      <if test="answer != null">
+        answer,
+      </if>
+      <if test="questiontypeId != null">
+        questiontype_id,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="choiceId != null">
+        #{choiceId,jdbcType=INTEGER},
+      </if>
+      <if test="choiceOne != null">
+        #{choiceOne,jdbcType=CHAR},
+      </if>
+      <if test="choiceTwo != null">
+        #{choiceTwo,jdbcType=CHAR},
+      </if>
+      <if test="choiceThree != null">
+        #{choiceThree,jdbcType=CHAR},
+      </if>
+      <if test="choiceFour != null">
+        #{choiceFour,jdbcType=CHAR},
+      </if>
+      <if test="answer != null">
+        #{answer,jdbcType=CHAR},
+      </if>
+      <if test="questiontypeId != null">
+        #{questiontypeId,jdbcType=INTEGER},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.questionbank.domain.Choice">
+    update choice
+    <set>
+      <if test="choiceOne != null">
+        choice_one = #{choiceOne,jdbcType=CHAR},
+      </if>
+      <if test="choiceTwo != null">
+        choice_two = #{choiceTwo,jdbcType=CHAR},
+      </if>
+      <if test="choiceThree != null">
+        choice_three = #{choiceThree,jdbcType=CHAR},
+      </if>
+      <if test="choiceFour != null">
+        choice_four = #{choiceFour,jdbcType=CHAR},
+      </if>
+      <if test="answer != null">
+        answer = #{answer,jdbcType=CHAR},
+      </if>
+      <if test="questiontypeId != null">
+        questiontype_id = #{questiontypeId,jdbcType=INTEGER},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where choice_id = #{choiceId,jdbcType=INTEGER}
+  </update>
+</mapper>

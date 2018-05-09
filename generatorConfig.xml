@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	 <classPathEntry   
+     location="/home/yiranblade/.m2/repository/mysql/mysql-connector-java/5.1.37/mysql-connector-java-5.1.37.jar" />
+  <context id="context1">
+ 	<property name="autoDelimitKeywords" value="false"/>
+    <!-- 生成的Java文件的编码 -->
+    <property name="javaFileEncoding" value="UTF-8"/>
+    <!-- 格式化java代码 -->
+    <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
+    <!-- 格式化XML代码 -->
+    <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
+    <commentGenerator>
+    	<property name="suppressDate" value="true"/>
+    	<property name="suppressAllComments" value="true"/>
+    </commentGenerator>
+    <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/questionbank" driverClass="com.mysql.jdbc.Driver" password="MyNewPass1!" userId="root"/>
+    <javaModelGenerator targetPackage="com.questionbank.domain" targetProject="questionbank" />
+    <sqlMapGenerator targetPackage="com.questionbank.mapping" targetProject="questionbank" />
+    <javaClientGenerator targetPackage="com.questionbank.dao" targetProject="questionbank" type="MIXEDMAPPER" />
+   <!--  
+    <table tableName="choice" domainObjectName="Choice"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>
+    <table tableName="fullblank" domainObjectName="FullBlank"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>
+    <table tableName="paper" domainObjectName="Paper"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>
+    <table tableName="profession" domainObjectName="Profession"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>
+    <table tableName="questiontype" domainObjectName="QuestionType"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>
+    <table tableName="schedule" domainObjectName="Schedule"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>
+    
+    <table tableName="schedule_info" domainObjectName="ScheduleInfo"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>
+    
+    <table tableName="setmark" domainObjectName="SetMark"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>-->
+    <!--  <table tableName="short_answer" domainObjectName="ShortAnswer"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>-->
+    <!--  <table tableName="solving" domainObjectName="Solving"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>-->
+    <!--  <table tableName="subject" domainObjectName="Subject"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>
+    <table tableName="teacher" domainObjectName="Teacher"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>-->
+    <!--  <table tableName="user" domainObjectName="User"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    		</table>-->
+    		
+    <table tableName="schedule_paper" domainObjectName="SchedulePaper"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>
+    <table tableName="paper_answer" domainObjectName="PaperAnswer"
+    		enableCountByExample="false" enableUpdateByExample="false"
+    		enableDeleteByExample="false" enableSelectByExample="false"
+    		selectByExampleQueryId="false">
+    </table>
+  </context>
+</generatorConfiguration>

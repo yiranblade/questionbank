@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.questionbank.dao.SetMarkMapper">
+  <resultMap id="BaseResultMap" type="com.questionbank.domain.SetMark">
+    <id column="setmark_id" jdbcType="INTEGER" property="setmarkId" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="count" jdbcType="INTEGER" property="count" />
+    <result column="mark" jdbcType="INTEGER" property="mark" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="schedule_id" jdbcType="INTEGER" property="scheduleId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    setmark_id, type, count, mark, createtime, schedule_id
+  </sql>
+  <insert id="insertSelective" parameterType="com.questionbank.domain.SetMark">
+    insert into setmark
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="setmarkId != null">
+        setmark_id,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="count != null">
+        count,
+      </if>
+      <if test="mark != null">
+        mark,
+      </if>
+      <if test="createtime != null">
+        createtime,
+      </if>
+      <if test="scheduleId != null">
+        schedule_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="setmarkId != null">
+        #{setmarkId,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="mark != null">
+        #{mark,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="scheduleId != null">
+        #{scheduleId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.questionbank.domain.SetMark">
+    update setmark
+    <set>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="count != null">
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="mark != null">
+        mark = #{mark,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="scheduleId != null">
+        schedule_id = #{scheduleId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where setmark_id = #{setmarkId,jdbcType=INTEGER}
+  </update>
+</mapper>
